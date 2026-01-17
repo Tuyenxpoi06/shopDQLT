@@ -17,7 +17,6 @@ nav.navbar {
 .nav-link {
   color: #6a6a6a;
   transition: color 0.3s;
-  
 }
 
 .nav-link:hover {
@@ -36,7 +35,12 @@ nav.navbar {
     height: 250px;
   }
 }
-
+/*phần lọc trang ao quan ----------------------*/
+.filter-btn {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 6px 20px;
+}
 /* Danh mục */
 .danh-muc {
   margin: 60px auto;
@@ -76,7 +80,9 @@ nav.navbar {
   padding: 10px 25px;
   border-radius: 8px;
 
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   font-weight: 600;
 }
 
@@ -254,7 +260,8 @@ footer h5 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("gioithieu/shopshop.jpg");
   background-size: cover;
   background-position: center;
