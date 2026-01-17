@@ -1,0 +1,289 @@
+/* Toàn trang */
+body {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Header */
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.nav-link {
+  color: #6a6a6a;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #000000;
+}
+
+/* Slide */
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+/* Danh mục */
+.danh-muc {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.luoi-san-pham {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.the-san-pham {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  width: 22%;
+  transition: 0.3s;
+}
+
+.the-san-pham img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Nút Mua */
+.nut-mua {
+  margin-top: auto;
+  background-color: #6c6767;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+.the-san-pham:hover .nut-mua {
+  opacity: 1;
+}
+
+/* rê chuột vào */
+.the-san-pham:hover {
+  transform: translateY(-5px);
+}
+
+.the-san-pham h6 {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.the-san-pham .gia {
+  color: rgb(15, 3, 3);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .luoi-san-pham .the-san-pham {
+    width: 45%;
+  }
+}
+
+.banner-trai img {
+  width: 100%;
+  border-radius: 10px; /* bo góc ảnh */
+}
+
+.nut-kham-pha {
+  display: inline-block;
+  background-color: #3a3a3a;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+}
+
+.nut-kham-pha:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .nut-kham-pha {
+    margin-top: 20px;
+  }
+}
+
+/* Footer-------------------------------------------- */
+footer {
+  background: #f8f8f8;
+  margin-top: 50px;
+  padding: 50px 0;
+  font-size: 0.95rem;
+}
+
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  text-align: left;
+  padding-top: 15px;
+  color: #555;
+  font-size: 0.85rem;
+}
+/* giỏ hàng ----------------------------------*/
+.thong-bao-them {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #28a745;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: none;
+  z-index: 9999;
+}
+
+.bieu-tuong-gio {
+  position: relative;
+  cursor: pointer;
+}
+
+.so-gio {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+@media (max-width: 576px) {
+  h3 {
+    font-size: 20px;
+  }
+  td img {
+    width: 50px;
+  }
+  .qty-btn {
+    width: 28px;
+    height: 28px;
+  }
+  td,
+  th {
+    font-size: 14px !important;
+  }
+}
+
+/*-------------------------------------------------lien he-------------------------------*/
+
+.contact-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+/*------------------------------------------------------*/
+
+.hinhtron {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background-position: center;
+}
+
+.khoangcachhinhtron {
+  display: flex;
+  text-align: center;
+  flex-direction: column; /* xếp dọc: hình trên – chữ dưới */
+  align-items: center;
+}
+.khoangcachhinhtron h {
+  margin-top: 8px; /* khoảng cách chữ với hình */
+  font-size: 16px;
+}
+
+.aboutus {
+  width: 100%;
+  height: 350px; /* chiều cao banner */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ảnh */
+.aboutus::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("gioithieu/shopshop.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Chữ */
+.aboutus-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.aboutus-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.aboutus-content p {
+  font-size: 18px;
+}
+
+.timhieu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Áo | DQLT Fashion</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header thanh tìm kiếm -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="DQLT Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="ao.html"> <u>ÁO</u></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="gioithieu.html"
+                >GIỚI THIỆU</a
+              >
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+              <i class="fa-solid fa-circle-user"></i>
+            </a>
+            <a href="giohang.html" class="bieu-tuong-gio position-relative">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span class="so-gio" id="so-gio">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SLIDE (Nếu có banner tự động) -->
+    <!--
+<div class="banner">
+  <img src="https://owen.cdn.vccloud.vn/media/codazon/slideshow/b/l/blazerda1.jpg" alt="Áo Polo">
+</div>
+-->
+
+    <!-- phần lọc -->
+    <div class="container my-4">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <!-- Danh Mục -->
+        <div class="dropdown">
+          <button
+            class="btn filter-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Danh Mục
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ao polo.html">Áo Polo</a></li>
+            <li>
+              <a class="dropdown-item" href="ao veston.html">Áo Veston</a>
+            </li>
+            <li><a class="dropdown-item" href="aosomi.html">Áo Sơ Mi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kích Cỡ -->
+        <div class="dropdown">
+          <button
+            class="btn filter-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Kích Cỡ
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">S</a></li>
+            <li><a class="dropdown-item" href="#">M</a></li>
+            <li><a class="dropdown-item" href="#">L</a></li>
+            <li><a class="dropdown-item" href="#">XL</a></li>
+          </ul>
+        </div>
+
+        <!-- Màu Sắc -->
+        <div class="dropdown">
+          <button
+            class="btn filter-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Màu Sắc
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đen</a></li>
+            <li><a class="dropdown-item" href="#">Trắng</a></li>
+            <li><a class="dropdown-item" href="#">Xanh</a></li>
+          </ul>
+        </div>
+
+        <!-- Giá -->
+        <div class="dropdown">
+          <button
+            class="btn filter-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Giá
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dưới 300k</a></li>
+            <li><a class="dropdown-item" href="#">300k - 500k</a></li>
+            <li><a class="dropdown-item" href="#">Trên 500k</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Áo Polo -->
+    <section class="danh-muc">
+      <h2>Áo Polo</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="ao/a1.webp" alt="Áo Polo - APV258037" />
+          <h6>Áo Polo - APV258037</h6>
+          <p class="gia">370.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258037"
+            data-price="370000"
+            data-img="ao/a1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a3.webp" alt="Áo Polo - APV258035" />
+          <h6>Áo Polo - APV258035</h6>
+          <p class="gia">343.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258035"
+            data-price="343000"
+            data-img="ao/a3.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a2.webp" alt="Áo Polo - APV258036" />
+          <h6>Áo Polo - APV258036</h6>
+          <p class="gia">343.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258036"
+            data-price="343000"
+            data-img="ao/a2.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a4.webp" alt="Áo Polo - APV253607" />
+          <h6>Áo Polo - APV253607</h6>
+          <p class="gia">588.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV253607"
+            data-price="588000"
+            data-img="ao/a4.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a257047.webp" alt="Áo Polo - APV257047" />
+          <h6>Áo Polo - APV257047</h6>
+          <p class="gia">370.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258037"
+            data-price="370000"
+            data-img="ao/a257047.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a257055.webp" alt="Áo Polo - APV257055" />
+          <h6>Áo Polo - APV257055</h6>
+          <p class="gia">650.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV257055"
+            data-price="650000"
+            data-img="ao/a257055.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a253663.webp" alt="Áo Polo - APV253663" />
+          <h6>Áo polo - APV253663</h6>
+          <p class="gia">560.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo polo - APV253663"
+            data-price="560000"
+            data-img="ao/a253663.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/a253662.webp" alt="Áo Polo - APV253662" />
+          <h6>Áo Polo - APV253662</h6>
+          <p class="gia">590.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV253662"
+            data-price="590000"
+            data-img="ao/a253662.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Khám phá -->
+    <section class="khung-banner container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="banner-trai">
+            <img
+              src="https://owen.vn/media/catalog/category/cate_somi.jpg"
+              alt="Simply Match Banner"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="#" class="nut-kham-pha">Khám phá thêm áo sơ mi tại đây!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áo Sơ Mi -->
+    <section class="danh-muc">
+      <h2>Áo Sơ Mi</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="ao/aAR258043D.webp" alt="Áo sơ mi - AR258043D" />
+          <h6>Áo sơ mi - AR258043D</h6>
+          <p class="gia">399.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR258043D"
+            data-price="399000"
+            data-img="ao/aAR258043D.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAB250067NT.webp" alt="Áo sơ mi - AB250067NT" />
+          <h6>Áo sơ mi - AB250067NT</h6>
+          <p class="gia">650.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250067NT"
+            data-price="650000"
+            data-img="ao/aAB250067NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAB258041NT.webp" alt="Áo sơ mi - AB258041NT" />
+          <h6>Áo sơ mi - AB258041NT</h6>
+          <p class="gia">380.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB258041NT"
+            data-price="380000"
+            data-img="ao/aAB258041NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAB250046NT.webp" alt="Áo sơ mi - AB250046NT" />
+          <h6>Áo sơ mi - AB250046NT</h6>
+          <p class="gia">1.300.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250046NT"
+            data-price="1300000"
+            data-img="ao/aAB250046NT.webp.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAS255065D.webp" alt="Áo sơ mi - AS255065D" />
+          <h6>Áo sơ mi - AS255065D</h6>
+          <p class="gia">750.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AS255065D"
+            data-price="750000"
+            data-img="ao/aAS255065D.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAB250074NT.webp" alt="Áo sơ mi - AB250074NT" />
+          <h6>Áo sơ mi - AB250074NT</h6>
+          <p class="gia">670.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250074NT"
+            data-price="670000"
+            data-img="ao/aAB250074NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAB250114NT.webp" alt="Áo sơ mi - AB250114NT" />
+          <h6>Áo sơ mi - AB250114NT</h6>
+          <p class="gia">680.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250114NT"
+            data-price="680000"
+            data-img="ao/aAB250114NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aAR250085DT.webp" alt="Áo sơ mi - AR250085DT" />
+          <h6>Áo sơ mi - AR250085DT</h6>
+          <p class="gia">720.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR250085DT"
+            data-price="720000"
+            data-img="ao/aAR250085DT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Khám phá -->
+    <section class="khung-banner container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="banner-trai">
+            <img
+              src="https://owen.vn/media/catalog/category/cate_vest.jpg"
+              alt="Simply Match Banner"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="#" class="nut-kham-pha">Xem thêm Áo Veston tại đây!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áo Veston -->
+    <section class="danh-muc">
+      <h2>Áo Veston</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES256133.webp" alt="Bộ Veston - VES256133" />
+          <h6>Bộ Veston - VES256133</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES256133"
+            data-price="3500000"
+            data-img="ao/aVES256133.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES256136.webp" alt="Bộ Veston - VES256136" />
+          <h6>Bộ Veston - VES256136</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="ao/aVES256136.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES256135.webp" alt="Bộ comple - VES256135" />
+          <h6>Bộ comple - VES256135</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="ao/aVES256135.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES231494.webp" alt="Bộ Veston - VES231494" />
+          <h6>Bộ Veston - VES231494</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES231494"
+            data-price="3500000"
+            data-img="ao/aVES231494.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES231496.webp" alt="Bộ Veston - VES231496" />
+          <h6>Bộ Veston - VES231496</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="ao/aVES231496.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES231682.webp" alt="Bộ Veston - VES231682" />
+          <h6>Bộ Veston - VES231682</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES231682"
+            data-price="3500000"
+            data-img="ao/aVES231682.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES231686.webp" alt="Bộ Veston - VES231686" />
+          <h6>Bộ Veston - VES231686</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="ao/aVES231686.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="ao/aVES231493.webp" alt="Bộ Veston - VES231493" />
+          <h6>Bộ Veston - VES231493</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="ao/aVES231493.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div class="thong-bao-them" id="tb-them">✔ Đã thêm vào giỏ hàng</div>
+    <script src="main.js"></script>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="#"></a>
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

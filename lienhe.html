@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Header thanh tìm kiếm -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img
+        src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+        alt="DQLT Logo"
+        
+      />
+    </a>
+
+    <!-- Nút 3 sọc (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu + Search -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Menu giữa -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="ao.html">ÁO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="gioithieu.html">GIỚI THIỆU</a>
+        </li>
+      </ul>
+
+      <!-- Search bên phải (nằm sau menu) -->
+      <form class="d-flex align-items-center" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Icon nằm ngoài cùng bên phải -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i>
+        </a>
+        <a href="giohang.html" class="bieu-tuong-gio position-relative">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="so-gio" id="so-gio">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <!-- Khối Liên hệ -->
+        <div class="col-lg-6 col-md-8">
+          <div class="contact-box">
+            <h2 class="contact-title text-center">Liên Hệ Với Chúng Tôi</h2>
+
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập tên của bạn"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Nhập email của bạn"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Số điện thoại</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập số điện thoại"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Nội dung</label>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Nhập nội dung cần liên hệ"
+                  required
+                ></textarea>
+              </div>
+
+              <button class="btn btn-dark w-100 py-2">Gửi Thông Tin</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Thông tin liên hệ -->
+        <div class="col-lg-4 col-md-8 mt-4 mt-lg-0">
+          <div class="contact-box">
+            <h2 class="contact-title">Thông Tin</h2>
+
+            <div class="info-item">
+              <strong>📍 Địa chỉ:</strong>
+              <span>23 Phong Đình Cảng, Vinh</span>
+            </div>
+
+            <div class="info-item">
+              <strong>📞 Điện thoại:</strong>
+              <span>0123 456 789</span>
+            </div>
+
+            <div class="info-item">
+              <strong>✉️ Email:</strong>
+              <span>support@example.com</span>
+            </div>
+
+            <div class="info-item">
+              <strong>🕒 Giờ làm việc:</strong>
+              <span>8:00 - 21:00 (T2 - CN)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="#"></a>
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

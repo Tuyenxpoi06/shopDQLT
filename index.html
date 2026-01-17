@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DQLT Shopping</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <!-- Header thanh tìm kiếm -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img
+        src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+        alt="DQLT Logo"
+        
+      />
+    </a>
+
+    <!-- Nút 3 sọc (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu + Search -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Menu giữa -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="ao.html">ÁO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="gioithieu.html">GIỚI THIỆU</a>
+        </li>
+      </ul>
+
+      <!-- Search bên phải (nằm sau menu) -->
+      <form class="d-flex align-items-center" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Icon nằm ngoài cùng bên phải -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i>
+        </a>
+        <a href="giohang.html" class="bieu-tuong-gio position-relative">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="so-gio" id="so-gio">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Slide trình chiếu ảnh -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/codazon/slideshow/b/l/blazerda1.jpg"
+            class="d-block w-100"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/codazon/slideshow/b/a/banner_hoang_duc_web.jpg"
+            class="d-block w-100"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/codazon/slideshow/u/p/uplift_style.jpg"
+            class="d-block w-100"
+            alt="Slide 3"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Sản phẩm mới về -->
+    <section class="danh-muc">
+      <h2>Sản Phẩm Mới Về</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="trangchu/v1.webp" alt="Bộ Veston - VE5231496" />
+
+          <h6>Bộ Veston - VES231496</h6>
+          <p class="gia">2.450.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES231496"
+            data-price="2450000"
+            data-img="trangchu/v1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/o/w/owen_phpc1153_3.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Bộ Veston - VES231682</h6>
+          <p class="gia">2.450.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES231682"
+            data-price="2450000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/o/w/owen_phpc1153_3.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/v/e/ves231686-bum._03.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Veston - VES231686</h6>
+          <p class="gia">1.750.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Veston - VES231686"
+            data-price="1750000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/v/e/ves231686-bum._03.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/v/e/ves231493._52.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Bộ Veston - VES231493</h6>
+          <p class="gia">1.750.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES231493"
+            data-price="1750000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/v/e/ves231493._52.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sản phẩm bán chạy -->
+    <section class="danh-muc">
+      <h2>Sản Phẩm Bán Chạy</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qst257075.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần nam - QST257075</h6>
+          <p class="gia">760.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần nam - QST257075"
+            data-price="760000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qst257075.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qs252427._1_1.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần tây - QS252427</h6>
+          <p class="gia">650.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần tây - QS252427"
+            data-price="650000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qs252427._1_1.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/1/1/1111_1.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>QTJ257123-Quần nam</h6>
+          <p class="gia">820.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="QTJ257123-Quần nam"
+            data-price="820000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/1/1/1111_1.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qs252429._1.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần tây - QS252429</h6>
+          <p class="gia">650.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần tây - QS252429"
+            data-price="650000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qs252429._1.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="khung-banner container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <!-- Banner Khám phá -->
+          <div class="banner-trai">
+            <img
+              src="https://owen.cdn.vccloud.vn/media/codazon/slideshow/b/a/banner_hoang_duc_web.jpg"
+              alt="Simply Match Banner"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="ao.html" class="nut-kham-pha">Khám phá thêm tại đây!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quần -->
+    <section class="danh-muc">
+      <h2>Quần</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/t/qtj257121.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần tây - QTJ257121</h6>
+          <p class="gia">820.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần tây - QTJ257121"
+            data-price="820000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/t/qtj257121.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/g/qg257112.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần tây - QG257112</h6>
+          <p class="gia">850.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần tây - QG257112"
+            data-price="850000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/g/qg257112.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qst257076.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Quần tây - QST257076</h6>
+          <p class="gia">750.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Quần tây - QST257076"
+            data-price="750000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/s/qst257076.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/t/qtj257124.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>QTJ257124-Quần nam</h6>
+          <p class="gia">820.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/q/t/qtj257124.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áo -->
+    <section class="danh-muc">
+      <h2>Áo</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/i/h/ihi06098.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Áo Polo - APV258037</h6>
+          <p class="gia">370.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258037"
+            data-price="370000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/i/h/ihi06098.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/i/h/ihi06175_2.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Áo Polo - APV258035</h6>
+          <p class="gia">343.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258035"
+            data-price="343000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/i/h/ihi06175_2.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/z/7/z7215706679799_706c79d9b819e16c28f9876633a9a762.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Áo Polo - APV258036</h6>
+          <p class="gia">343.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV258036"
+            data-price="343000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/z/7/z7215706679799_706c79d9b819e16c28f9876633a9a762.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img
+            src="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/o/w/owen_50_1.jpg"
+            alt="Bộ Veston - VE5231496"
+          />
+
+          <h6>Áo Polo - APV253607</h6>
+          <p class="gia">588.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo Polo - APV253607"
+            data-price="588000"
+            data-img="https://owen.cdn.vccloud.vn/media/catalog/product/cache/d52d7e242fac6dae82288d9a793c0676/o/w/owen_50_1.jpg"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div class="thong-bao-them" id="tb-them">✔ Đã thêm vào giỏ hàng</div>
+    <script src="main.js"></script>
+    
+
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="#"></a>
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

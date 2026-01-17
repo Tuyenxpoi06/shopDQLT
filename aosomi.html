@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DQLT Shopping</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <!-- Header -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img
+        src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+        alt="DQLT Logo"
+        
+      />
+    </a>
+
+    <!-- Nút 3 sọc (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu + Search -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Menu giữa -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="ao.html">ÁO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="gioithieu.html">GIỚI THIỆU</a>
+        </li>
+      </ul>
+
+      <!-- Search bên phải (nằm sau menu) -->
+      <form class="d-flex align-items-center" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+         
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Icon nằm ngoài cùng bên phải -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i>
+        </a>
+        <a href="giohang.html" class="bieu-tuong-gio position-relative">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="so-gio" id="so-gio">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- phần lọc -->
+    <div class="container my-4">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <!-- Icon Filter -->
+        <div
+          class="bieu-tuong-loc d-flex align-items-center justify-content-center"
+        >
+          <i class="bi bi-sliders"></i>
+        </div>
+
+        <!-- Danh Mục -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Danh Mục
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ao polo.html">Áo Polo</a></li>
+            <li>
+              <a class="dropdown-item" href="ao veston.html">Áo Veston</a>
+            </li>
+            <li><a class="dropdown-item" href="aosomi.html">Áo Sơ Mi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kích Cỡ -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Kích Cỡ
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">S</a></li>
+            <li><a class="dropdown-item" href="#">M</a></li>
+            <li><a class="dropdown-item" href="#">L</a></li>
+            <li><a class="dropdown-item" href="#">XL</a></li>
+          </ul>
+        </div>
+
+        <!-- Màu Sắc -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Màu Sắc
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đen</a></li>
+            <li><a class="dropdown-item" href="#">Trắng</a></li>
+            <li><a class="dropdown-item" href="#">Xanh</a></li>
+          </ul>
+        </div>
+
+        <!-- Giá -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Giá
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dưới 300k</a></li>
+            <li><a class="dropdown-item" href="#">300k - 500k</a></li>
+            <li><a class="dropdown-item" href="#">Trên 500k</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sản phẩm -->
+    <section class="danh-muc">
+      <h2>Áo Sơ Mi</h2>
+
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm1.webp" alt="Áo sơ mi - AR258043D" />
+          <h6>Áo sơ mi - AR258043D</h6>
+          <p class="gia">399.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR258043D"
+            data-price="399000"
+            data-img="aosomi/asm1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AR258038D.webp" alt="Áo sơ mi - AR258038D" />
+          <h6>Áo sơ mi - AR258038D</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR258038D"
+            data-price="3500000"
+            data-img="aosomi/asm_AR258038D.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB258041NT.webp" alt="Áo sơ mi - AB258041NT" />
+          <h6>Áo sơ mi - AB258041NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB258041NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB258041NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250046NT.webp" alt="Áo sơ mi - AB250046NT" />
+          <h6>Áo sơ mi - AB250046NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250046NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250046NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AS255065D.webp" alt="Áo sơ mi - AS255065D" />
+          <h6>Áo sơ mi - AS255065D</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AS255065D"
+            data-price="3500000"
+            data-img="aosomi/asm_AS255065D.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250074NT.webp" alt="Áo sơ mi - AB250074NT" />
+          <h6>Áo sơ mi - AB250074NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250074NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250074NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250114NT.webp" alt="Áo sơ mi - AB250114NT" />
+          <h6>Áo sơ mi - AB250114NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250114NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250114NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AR250085DT.webp" alt="Áo sơ mi - AR250085DT" />
+          <h6>Áo sơ mi - AR250085DT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR250085DT"
+            data-price="3500000"
+            data-img="aosomi/asm_AR250085DT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AR250026DT.webp" alt="Áo sơ mi - AR250026DT" />
+          <h6>Áo sơ mi - AR250026DT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AR250026DT"
+            data-price="3500000"
+            data-img="aosomi/asm_AR250026DT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AJ255051DT.webp" alt="Áo sơ mi - AJ255051DT" />
+          <h6>Áo sơ mi - AJ255051DT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AJ255051DT"
+            data-price="3500000"
+            data-img="aosomi/asm_AJ255051DT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250104NT.webp" alt="Áo sơ mi - AB250104NT" />
+          <h6>Áo sơ mi - AB250104NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250104NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250104NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AJ250000N.webp" alt="Áo sơ mi - AJ250000N" />
+          <h6>Áo sơ mi - AJ250000N</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AJ250000N"
+            data-price="3500000"
+            data-img="aosomi/asm_AJ250000N.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AJ250003N.webp" alt="Áo sơ mi - AJ250003N" />
+          <h6>Áo sơ mi - AJ250003N</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AJ250003N"
+            data-price="3500000"
+            data-img="aosomi/asm_AJ250003N.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AJ250005N.webp" alt="Áo sơ mi - AJ250005N" />
+          <h6>Áo sơ mi - AJ250005N</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AJ250005N"
+            data-price="3500000"
+            data-img="aosomi/asm_AJ250005N.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250053NT.webp" alt="Áo sơ mi - AB250053NT" />
+          <h6>Áo sơ mi - AB250053NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250053NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250053NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aosomi/asm_AB250083NT.webp" alt="Áo sơ mi - AB250083NT" />
+          <h6>Áo sơ mi - AB250083NT</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Áo sơ mi - AB250083NT"
+            data-price="3500000"
+            data-img="aosomi/asm_AB250083NT.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div class="thong-bao-them" id="tb-them">✔ Đã thêm vào giỏ hàng</div>
+
+    <script src="main.js"></script>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="#"></a>
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

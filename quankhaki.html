@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quần Khaki | DQLT Fashion</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img
+        src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+        alt="DQLT Logo"
+        
+      />
+    </a>
+
+    <!-- Nút 3 sọc (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu + Search -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Menu giữa -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="ao.html">ÁO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="gioithieu.html">GIỚI THIỆU</a>
+        </li>
+      </ul>
+
+      <!-- Search bên phải (nằm sau menu) -->
+      <form class="d-flex align-items-center" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Icon nằm ngoài cùng bên phải -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i>
+        </a>
+        <a href="giohang.html" class="bieu-tuong-gio position-relative">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="so-gio" id="so-gio">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- phần lọc -->
+    <div class="container my-4">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <!-- Danh Mục -->
+        <div class="dropdown">
+          <button class="btn filter-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Danh Mục
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="quantay.html">Quần Tây</a></li>
+            <li><a class="dropdown-item" href="quanjean.html">Quần Jean</a></li>
+            <li><a class="dropdown-item" href="quankhaki.html">Quần Khaki</a></li>
+          </ul>
+        </div>
+
+        <!-- Kích Cỡ -->
+        <div class="dropdown">
+          <button class="btn filter-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Kích Cỡ
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">S</a></li>
+            <li><a class="dropdown-item" href="#">M</a></li>
+            <li><a class="dropdown-item" href="#">L</a></li>
+            <li><a class="dropdown-item" href="#">XL</a></li>
+          </ul>
+        </div>
+
+        <!-- Màu Sắc -->
+        <div class="dropdown">
+          <button class="btn filter-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Màu Sắc
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đen</a></li>
+            <li><a class="dropdown-item" href="#">Trắng</a></li>
+            <li><a class="dropdown-item" href="#">Xanh</a></li>
+          </ul>
+        </div>
+
+        <!-- Giá -->
+        <div class="dropdown">
+          <button class="btn filter-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Giá
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dưới 300k</a></li>
+            <li><a class="dropdown-item" href="#">300k - 500k</a></li>
+            <li><a class="dropdown-item" href="#">Trên 500k</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quần Khaki -->
+    <!-- ĐỔI CLASS theo CSS: category/product-grid/product-card/buy-now/price -->
+    <section class="danh-muc">
+      <h2>Quần Khaki</h2>
+
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qkk1.webp" alt="Quần khaki - QKR251265" />
+          <h6>Quần khaki - QKR251265</h6>
+          <p class="gia">720.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251265"
+            data-price="720000"
+            data-img="quankhaki/qkk1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKS256103.webp" alt="Quần khaki - QKS256103" />
+          <h6>Quần khaki - QKS256103</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKS256103"
+            data-price="3500000"
+            data-img="quan/q_QKS256103.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKR256100.webp" alt="Quần khaki - QKR256100" />
+          <h6>Quần khaki - QKR256100</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR256100"
+            data-price="3500000"
+            data-img="quan/q_QKR256100.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKR251278.webp" alt="Quần khaki - QKR251278" />
+          <h6>Quần khaki - QKR251278</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251278"
+            data-price="3500000"
+            data-img="quan/q_QKR251278.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKS256102.webp" alt="Quần khaki - QKS256102" />
+        </button>
+        <h6>Quần khaki - QKS256102</h6>
+        <button
+          class="nut-mua add-cart"
+          data-name="Quần khaki - QKS256102"
+          data-price="3500000"
+          data-img="quan/q_QKS256102.webp"
+        >
+          Thêm vào giỏ hàng
+          <p class="gia">3.500.000 VND</p>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKS251273.webp" alt="Quần khaki - QKS251273" />
+          <h6>Quần khaki - QKS251273</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKS251273"
+            data-price="3500000"
+            data-img="quan/q_QKS251273.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKR251271.webp" alt="Quần khaki - QKR251271" />
+          <h6>Quần khaki - QKR251271</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251271"
+            data-price="3500000"
+            data-img="quan/q_QKR251271.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quan/q_QKS251272.webp" alt="Quần khaki - QKS251272" />
+          <h6>Quần khaki - QKS251272</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKS251272"
+            data-price="3500000"
+            data-img="quan/q_QKS251272.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <!-- SỬA LỖI: button bị dính chữ -->
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251279.webp" alt="Quần khaki - QKR251279" />
+          <h6>Quần khaki - QKR251279</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251279"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251279.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251264.webp" alt="Quần khaki - QKR251264" />
+          <h6>Quần khaki - QKR251264</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251264"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251264.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251266.webp" alt="Quần khaki - QKR251266" />
+          <h6>Quần khaki - QKR251266</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251266"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251266.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKS251274.webp" alt="Quần khaki - QKS251274" />
+          <h6>Quần khaki - QKS251274</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKS251274"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKS251274.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251267.webp" alt="Quần khaki - QKR251267" />
+          <h6>Quần khaki - QKR251267</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251267"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251267.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251280.webp" alt="Quần khaki - QKR251280" />
+          <h6>Quần khaki - QKR251280</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251280"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251280.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKS251275.webp" alt="Quần khaki - QKS251275" />
+          <h6>Quần khaki - QKS251275</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKS251275"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKS251275.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="quankhaki/qk_QKR251268.webp" alt="Quần khaki - QKR251268" />
+          <h6>Quần khaki - QKR251268</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua add-cart"
+            data-name="Quần khaki - QKR251268"
+            data-price="3500000"
+            data-img="quankhaki/qk_QKR251268.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+<!-- Alert (trùng với CSS .thong-bao-them) -->
+<div class="thong-bao-them" id="thong-bao-them">✔ Đã thêm vào giỏ hàng</div>
+
+<script>
+  // Badge số lượng giỏ: ưu tiên id="so-gio" (nếu bạn có)
+  const soGio = document.getElementById("so-gio") || document.querySelector(".so-gio");
+  const addAlert = document.getElementById("thong-bao-them");
+
+  function layCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  function luuCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  function capNhatSoGio() {
+    if (!soGio) return;
+    const cart = layCart();
+    soGio.textContent = cart.length;
+  }
+
+  function showAlert() {
+    if (!addAlert) return;
+    addAlert.style.display = "block";
+    clearTimeout(showAlert._t);
+    showAlert._t = setTimeout(() => (addAlert.style.display = "none"), 1200);
+  }
+
+  // Bắt các nút thêm giỏ (class .add-cart)
+  document.querySelectorAll(".add-cart").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const product = {
+        name: this.dataset.name,
+        price: Number(this.dataset.price),
+        img: this.dataset.img,
+        qty: 1,
+      };
+
+      const cart = layCart();
+
+      // (Tuỳ chọn) gộp sản phẩm trùng tên + giá -> tăng qty thay vì push trùng
+      const index = cart.findIndex(
+        (p) => p.name === product.name && Number(p.price) === Number(product.price)
+      );
+
+      if (index >= 0) cart[index].qty += 1;
+      else cart.push(product);
+
+      luuCart(cart);
+      capNhatSoGio();
+      showAlert();
+    });
+  });
+
+  capNhatSoGio();
+</script>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DQLT Shopping</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <!-- Header -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img
+        src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-uoe-chu-dau-uoe-logo-don-sac-su-dung-hinh-luc-giac_1101554-59452.jpg?semt=ais_hybrid&w=740&q=80"
+        alt="DQLT Logo"
+        
+      />
+    </a>
+
+    <!-- Nút 3 sọc (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu + Search -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Menu giữa -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="ao.html">ÁO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="quan.html">QUẦN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="lienhe.html">LIÊN HỆ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="gioithieu.html">GIỚI THIỆU</a>
+        </li>
+      </ul>
+
+      <!-- Search bên phải (nằm sau menu) -->
+      <form class="d-flex align-items-center" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <!-- Icon nằm ngoài cùng bên phải -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="taikhoan.html" class="me-3 fs-5 text-decoration-none">
+          <i class="fa-solid fa-circle-user"></i>
+        </a>
+        <a href="giohang.html" class="bieu-tuong-gio position-relative">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="so-gio" id="so-gio">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- phần lọc -->
+    <div class="container my-4">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <!-- Icon Filter -->
+        <div
+          class="bieu-tuong-loc d-flex align-items-center justify-content-center"
+        >
+          <i class="bi bi-sliders"></i>
+        </div>
+
+        <!-- Danh Mục -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Danh Mục
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ao polo.html">Áo Polo</a></li>
+            <li>
+              <a class="dropdown-item" href="ao veston.html">Áo Veston</a>
+            </li>
+            <li><a class="dropdown-item" href="aosomi.html">Áo Sơ Mi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kích Cỡ -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Kích Cỡ
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">S</a></li>
+            <li><a class="dropdown-item" href="#">M</a></li>
+            <li><a class="dropdown-item" href="#">L</a></li>
+            <li><a class="dropdown-item" href="#">XL</a></li>
+          </ul>
+        </div>
+
+        <!-- Màu Sắc -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Màu Sắc
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đen</a></li>
+            <li><a class="dropdown-item" href="#">Trắng</a></li>
+            <li><a class="dropdown-item" href="#">Xanh</a></li>
+          </ul>
+        </div>
+
+        <!-- Giá -->
+        <div class="dropdown">
+          <button
+            class="btn nut-loc dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Giá
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dưới 300k</a></li>
+            <li><a class="dropdown-item" href="#">300k - 500k</a></li>
+            <li><a class="dropdown-item" href="#">Trên 500k</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sản phẩm -->
+    <section class="danh-muc">
+      <h2>Áo Veston</h2>
+      <div class="luoi-san-pham">
+        <div class="the-san-pham text-center">
+          <img src="aoveston/avt1.webp" alt="Bộ Veston - VES256133" />
+          <h6>Bộ Veston - VES256133</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VES256133"
+            data-price="3500000"
+            data-img="aoveston/avt1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES256136.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ comple - VES256136</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES256136.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES256135.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ comple - VES256135</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES256135.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231494.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231494</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231494.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231496.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VE5231496</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231496.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231682.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231682</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231682.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231686.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231686</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231686.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231493.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231493</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231493.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231684.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231684</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231684.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231495.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231495</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231495.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231683.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231683</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231683.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES256133.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES256133</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES256133.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES256132.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES256132</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES256132.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231494_1.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231494</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231494_1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231687.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231687</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231687.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+
+        <div class="the-san-pham text-center">
+          <img src="aoveston/av_VES231686_1.webp" alt="Bộ Veston - VE5231496" />
+          <h6>Bộ Veston - VES231686</h6>
+          <p class="gia">3.500.000 VND</p>
+          <button
+            class="nut-mua them-gio"
+            data-name="Bộ Veston - VE5231496"
+            data-price="3500000"
+            data-img="aoveston/av_VES231686_1.webp"
+          >
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div class="thong-bao-them" id="tb-them">✔ Đã thêm vào giỏ hàng</div>
+
+    <script src="main.js"></script>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row text-start">
+          <div class="col-md-3 mb-3">
+            <h5>Về DQLT Shopping</h5>
+            <p>Thông Tin<br />Địa Chỉ Liên Hệ<br />Thông Báo</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Trợ Giúp</h5>
+            <p>FAQ<br />Câu Hỏi Thường Gặp<br />Chính Sách Đổi Trả Hàng</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="#"></a>
+            <h5>Tài Khoản</h5>
+            <p>Tư Cách Thành Viên<br />Hồ Sơ<br />Đăng Ký Thành Viên</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h5>Bản Tin Điện Tử</h5>
+            <p>Đăng ký để nhận ưu đãi mới nhất</p>
+          </div>
+        </div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <div class="footer-bottom mt-4">
+          BẢN QUYỀN THUỘC CÔNG TY TNHH DQLT SHOPPING
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
