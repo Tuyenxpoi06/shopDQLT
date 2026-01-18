@@ -1,47 +1,44 @@
 // main.js
 
-document.addEventListener("DOMContentLoaded", () => {
+ddocument.addEventListener("DOMContentLoaded", () => {
   const cartCount = document.getElementById("so-gio");
   const addAlert = document.getElementById("tb-them");
 
-  function getCart() {
+  function layGioHang() {
     return JSON.parse(localStorage.getItem("cart")) || [];
   }
 
-  function setCart(cart) {
-    localStorage.setItem("cart", JSON.stringify(cart));
+  function luuGioHang(gioHang) {
+    localStorage.setItem("cart", JSON.stringify(gioHang));
   }
 
-  function updateCartCount() {
-    const cart = getCart();
-    if (cartCount) cartCount.textContent = cart.length;
+  function capNhatSoGio() {
+    const gioHang = layGioHang();
+    if (cartCount) cartCount.textContent = gioHang.length;
   }
 
-  function showAlert() {
+  function hienThongBao() {
     if (!addAlert) return;
     addAlert.style.display = "block";
     setTimeout(() => (addAlert.style.display = "none"), 1200);
   }
 
-  // Gắn sự kiện cho tất cả nút "Thêm vào giỏ hàng"
-  document.querySelectorAll(".them-gio").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const product = {
+  document.querySelectorAll(".them-gio").forEach((nut) => {
+    nut.addEventListener("click", function () {
+      const sanPham = {
         name: this.dataset.name,
         price: Number(this.dataset.price),
         img: this.dataset.img,
       };
 
-      const cart = getCart();
-      cart.push(product);
-      setCart(cart);
+      const gioHang = layGioHang();
+      gioHang.push(sanPham);
+      luuGioHang(gioHang);
 
-      updateCartCount();
-      showAlert();
+      capNhatSoGio();
+      hienThongBao();
     });
   });
 
-  // Cập nhật số giỏ khi tải trang
-  updateCartCount();
+  capNhatSoGio();
 });
-      
